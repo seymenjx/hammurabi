@@ -18,7 +18,7 @@ class ConvoViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         workspace = self.request.user.workspace_set.all()[0]
-        return models.Convo.objects.filter(workspace=workspace)
+        return models.Convo.objects.filter(subspace__workspace=workspace)
     
 
     def create(self, request, *args, **kwargs):

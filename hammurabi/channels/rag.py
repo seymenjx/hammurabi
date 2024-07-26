@@ -19,7 +19,7 @@ class Rag():
     def get_pinecone_vectorstore(self):
         embeddings = OpenAIEmbeddings(model='text-embedding-3-large')# aryan recommened
         vectorstore = PineconeVectorStore(  embedding=embeddings,
-                                            index_name="hukukai",
+                                            index_name="hammurabi",
                                             )
 
         return vectorstore
